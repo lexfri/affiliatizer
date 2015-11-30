@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>DefaultValue</key>
+		<string>thelexfiles05-20</string>
+		<key>Key</key>
+		<string>amazonAffiliate</string>
+		<key>Title</key>
+		<string>Amazon affiliate code</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>daringfirebal-20</string>
+		<key>Key</key>
+		<string>amazonAffiliate2</string>
+		<key>Title</key>
+		<string>Second Amazon affiliate code</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>intertext</string>
+		<key>Key</key>
+		<string>amazonAffiliate3</string>
+		<key>Title</key>
+		<string>Third Amazon affiliate code</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+</array>
+</plist>
