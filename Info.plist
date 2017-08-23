@@ -3,17 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Lex Friedman</string>
+	<string>Lex Friedman, Jonas Höchst</string>
+	<key>Builder Version</key>
+	<string>12603.2.4</string>
 	<key>CFBundleDisplayName</key>
 	<string>Affiliatizer For Safari</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.lexfriedman.affiliatizer</string>
+	<string>de.jonashoechst.affiliatizer</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.41</string>
+	<string>1.5</string>
 	<key>CFBundleVersion</key>
-	<string>1.41</string>
+	<string>1.5</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -30,7 +32,9 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Enter up to three affiliate codes to insert into Amazon URLs.</string>
+	<string>Enter up to five affiliate codes to insert into Amazon URLs.</string>
+	<key>DeveloperIdentifier</key>
+	<string>S2M4R3QVMR</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -46,6 +50,6 @@
 	<key>Update Manifest URL</key>
 	<string>http://lexfriedman.com/extensions/extensions.plist</string>
 	<key>Website</key>
-	<string>http://lexfriedman.com/extensions/</string>
+	<string>https://github.com/jonashoechst/Affiliatizer.safariextension</string>
 </dict>
 </plist>
