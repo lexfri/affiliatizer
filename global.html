@@ -24,6 +24,16 @@
 				if (three != null & three > "") {
 					affs.push(three);
 				}
+		
+				four = safari.extension.settings.getItem("amazonAffiliate4");
+				if (four != null & four > "") {
+					affs.push(four);
+				}
+		
+				five = safari.extension.settings.getItem("amazonAffiliate5");
+				if (five != null & five > "") {
+					affs.push(five);
+				}
 				
 				safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("setAffiliate", affs);
 			}

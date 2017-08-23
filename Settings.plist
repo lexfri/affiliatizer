@@ -76,5 +76,25 @@
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string></string>
+		<key>Key</key>
+		<string>amazonAffiliate4</string>
+		<key>Title</key>
+		<string>Amazon affiliate tag 4</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string></string>
+		<key>Key</key>
+		<string>amazonAffiliate5</string>
+		<key>Title</key>
+		<string>Amazon affiliate tag 5</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
 </array>
 </plist>
