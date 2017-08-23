@@ -52,7 +52,7 @@
 		<key>Key</key>
 		<string>amazonAffiliate</string>
 		<key>Title</key>
-		<string>Amazon affiliate code</string>
+		<string>Amazon affiliate tag 1</string>
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
@@ -62,7 +62,7 @@
 		<key>Key</key>
 		<string>amazonAffiliate2</string>
 		<key>Title</key>
-		<string>Second Amazon affiliate code</string>
+		<string>Amazon affiliate tag 2</string>
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
@@ -72,7 +72,7 @@
 		<key>Key</key>
 		<string>amazonAffiliate3</string>
 		<key>Title</key>
-		<string>Third Amazon affiliate code</string>
+		<string>Amazon affiliate tag 3</string>
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
