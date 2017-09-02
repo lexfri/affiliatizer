@@ -7,7 +7,7 @@ A Safari plug-in for automatically adding the affiliate codes of your choice to 
 
 ### Installation 
 
-#### Visit the [Safari Extensions Gallery](https://safari-extensions.apple.com/details/?id=de.jonashoechst.affiliatizer-S2M4R3QVMR>) and click *Install now*.
+#### Visit the [Safari Extensions Gallery](https://safari-extensions.apple.com/details/?id=de.jonashoechst.affiliatizer-S2M4R3QVMR) and click *Install now*.
 
 
 Alternatively download latest release from [GitHub Affiliatizer Releases Page](https://github.com/jonashoechst/Affiliatizer.safariextension/releases/latest) and double click to add to Safari.
