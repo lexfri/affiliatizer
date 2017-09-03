@@ -12,6 +12,9 @@ A Safari plug-in for automatically adding the affiliate codes of your choice to 
 
 Alternatively download latest release from [GitHub Affiliatizer Releases Page](https://github.com/jonashoechst/Affiliatizer.safariextension/releases/latest) and double click to add to Safari.
 
+
+You can find the **affiliate tags** by clicking on an affiliate link (which contains for example *...&site-redirect=de&tag=exampletag-21&linkId=00c37ba58...*) and then looking for the *&tag=* text (most often towards the end of the link) and copy everything until the next *&* or the end. In this example it would be *exampletag-21*. This can be pasted into the Extension-Settings (*Cmd+,* => Extensions => Affiliatizer)
+
 ### Configuration Interface
 
 <img src="ressources/screenshot-config.png" width="70%">
