@@ -4,11 +4,57 @@
 <array>
 	<dict>
 		<key>DefaultValue</key>
+		<string>amazon.com</string>
+		<key>Key</key>
+		<string>amazonDomain</string>
+		<key>Title</key>
+		<string>Amazon Domain</string>
+		<key>Titles</key>
+		<array>
+			<string>Australia (amazon.com.au)</string>
+			<string>Brazil (amazon.com.br)</string>
+			<string>Canada (amazon.ca)</string>
+			<string>China (amazon.cn)</string>
+			<string>France (amazon.fr)</string>
+			<string>Germany (amazon.de)</string>
+			<string>Italy (amazon.it)</string>
+			<string>India (amazon.in)</string>
+			<string>Japan (amazon.co.jp)</string>
+			<string>Mexico (amazon.mx)</string>
+			<string>Netherlands (amazon.nl)</string>
+			<string>Singapore (amazon.sg)</string>
+			<string>Spain (amazon.es)</string>
+			<string>United Kingdom (amazon.co.uk)</string>
+			<string>United States (amazon.com)</string>
+		</array>
+		<key>Type</key>
+		<string>PopUpButton</string>
+		<key>Values</key>
+		<array>
+			<string>amazon.com.au</string>
+			<string>amazon.com.br</string>
+			<string>amazon.ca</string>
+			<string>amazon.cn</string>
+			<string>amazon.fr</string>
+			<string>amazon.de</string>
+			<string>amazon.it</string>
+			<string>amazon.in</string>
+			<string>amazon.co.jp</string>
+			<string>amazon.mx</string>
+			<string>amazon.nl</string>
+			<string>amazon.sg</string>
+			<string>amazon.es</string>
+			<string>amazon.co.uk</string>
+			<string>amazon.com</string>
+		</array>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
 		<string>thelexfiles05-20</string>
 		<key>Key</key>
 		<string>amazonAffiliate</string>
 		<key>Title</key>
-		<string>Amazon affiliate code</string>
+		<string>Amazon affiliate tag 1</string>
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
@@ -18,7 +64,7 @@
 		<key>Key</key>
 		<string>amazonAffiliate2</string>
 		<key>Title</key>
-		<string>Second Amazon affiliate code</string>
+		<string>Amazon affiliate tag 2</string>
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>
@@ -28,7 +74,27 @@
 		<key>Key</key>
 		<string>amazonAffiliate3</string>
 		<key>Title</key>
-		<string>Third Amazon affiliate code</string>
+		<string>Amazon affiliate tag 3</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string></string>
+		<key>Key</key>
+		<string>amazonAffiliate4</string>
+		<key>Title</key>
+		<string>Amazon affiliate tag 4</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string></string>
+		<key>Key</key>
+		<string>amazonAffiliate5</string>
+		<key>Title</key>
+		<string>Amazon affiliate tag 5</string>
 		<key>Type</key>
 		<string>TextField</string>
 	</dict>

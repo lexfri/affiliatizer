@@ -1,57 +1,58 @@
 <html>
 <head>
 <script type="text/javascript">
+	safari.application.addEventListener("message", respondToMessage, false);
 
-safari.extension.settings.addEventListener("change", somethingChanged, false);
+	function respondToMessage(messageEvent) {
+	    var messageName = messageEvent.name;
+	    var messageData = messageEvent.message;
+		
+		if (messageName === "get") {
+			if (messageData === "tags") {
+				affs = [];
+				one = safari.extension.settings.getItem("amazonAffiliate");
+				if (one != null & one > "") {
+					affs.push(one);
+				}
+		
+				two = safari.extension.settings.getItem("amazonAffiliate2");
+				if (two != null & two > "") {
+					affs.push(two);
+				}
+		
+				three = safari.extension.settings.getItem("amazonAffiliate3");
+				if (three != null & three > "") {
+					affs.push(three);
+				}
+		
+				four = safari.extension.settings.getItem("amazonAffiliate4");
+				if (four != null & four > "") {
+					affs.push(four);
+				}
+		
+				five = safari.extension.settings.getItem("amazonAffiliate5");
+				if (five != null & five > "") {
+					affs.push(five);
+				}
+				
+				safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("setAffiliate", affs);
+			}
 
-function somethingChanged(event) {
-	if (event.key == "amazonAffiliate" || event.key == "amazonAffiliate2" || event.key == "amazonAffiliate3") {
-		affs = [];
-		one = safari.extension.settings.getItem("amazonAffiliate");
-		if (one != null & one > '') {
-			affs.push(one);
+			if (messageData === "domain") {
+				domain = safari.extension.settings.getItem("amazonDomain");
+				if (!domain || domain == "" || domain == null) {
+					domain = "amazon.com";
+				}
+				
+				safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("setDomain", domain);
+			}
 		}
 		
-		two = safari.extension.settings.getItem("amazonAffiliate2");
-		if (two != null & two > '') {
-			affs.push(two);
+		if (messageName === "refresh") {
+			safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("refresh", "");
 		}
-		
-		three = safari.extension.settings.getItem("amazonAffiliate3");
-		if (three != null & three > '') {
-			affs.push(three);
-		}
-		
-		safari.application.activeBrowserWindow.activeTab.page.dispatchMessage('newAffiliate', affs);
-	} 
-}
-
-safari.application.addEventListener("message", respondToMessage, false);
-
-function respondToMessage(messageEvent) {
-	if (messageEvent.name == "tellMe") {
-		affs = [];
-		one = safari.extension.settings.getItem("amazonAffiliate");
-		if (one != null & one > '') {
-			affs.push(one);
-		}
-		
-		two = safari.extension.settings.getItem("amazonAffiliate2");
-		if (two != null & two > '') {
-			affs.push(two);
-		}
-		
-		three = safari.extension.settings.getItem("amazonAffiliate3");
-		if (three != null & three > '') {
-			affs.push(three);
-		}
-		
-		safari.application.activeBrowserWindow.activeTab.page.dispatchMessage('newAffiliate', affs);
 	}
-}
-
 </script>
-
 </head>
 <body></body>
 </html>

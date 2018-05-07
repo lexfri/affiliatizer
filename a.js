@@ -1,70 +1,64 @@
-if (window.top === window) {
-	var rewroteLinksWithSetting = 0;
-	var tag = 0;
-	var lastTag = 0;
-	var ender = '';
-	links = document.getElementsByTagName('a'); 
-	theLength = links.length;
-	
-	safari.self.addEventListener("message", handleMessage, false);
-	safari.self.tab.dispatchMessage("tellMe", "please"); // ask for value
-}
+var tags = ["thelexfiles05-20","daringfirebal-20", "intertext"];
+var domain = "amazon.com"
+var http_url = "http://www."+domain;
+var https_url = "https://www."+domain;
+
+// update configuration
+safari.self.addEventListener("message", handleMessage, false);
+safari.self.tab.dispatchMessage("get", "tags");
+safari.self.tab.dispatchMessage("get", "domain");
+safari.self.tab.dispatchMessage("refresh", "");
+
+links = document.getElementsByTagName("a");
 
 function rewriteLinks(theTag) {
-	newEnder = 0;
+	var ender = "";
 	
-	for (i=0;i<theLength;i++) { 
-		if (i > 1000) {
-			break;
-		}
+	for (i = 0; i < links.length; i++) {
+		if (i > 1000) break;
 		
 		href = links[i].href;
-		if (href.indexOf('www.amazon.com') != -1 && href.indexOf('tag=') == -1) {
-			if (href != 'http://www.amazon.com/' && href.indexOf('?') == -1 && href.indexOf('/ref=') == -1) {
-		 		 stringLength = href.length;
-				 startAt = stringLength - 4;
-				 lastFour = href.substring(startAt);				 
-				 if (lastFour == 'html') {
-				 	ender = '?tag=' + theTag;
- 				 } else {
-					ender = '/ref=nosim/' + theTag;
- 				 }
-			} else if (href.indexOf('?') != -1) {
-				ender = '&tag=' + theTag;
-			} else if (href == 'http://www.amazon.com/' || href == 'http://www.amazon.com') {
-				ender = '?tag=' + theTag;
-			}
-			links[i].href = links[i].href + ender;
-		} else if (ender > '' && href.indexOf('amazon.com') != -1) {
-			newEnder = ender.replace(lastTag, theTag);
-			links[i].href = links[i].href.replace(ender, newEnder);
-		}
 		
+		if (href.indexOf(domain) != -1) {
+			if (href.indexOf("tag=") == -1) {
+				
+				if (href.indexOf("?") != -1) {
+					ender = "&tag=" + theTag;
+				} else {
+					ender = "?tag=" + theTag;
+				}
+				
+				links[i].href = href + ender;
+			}
+		}
 	}
-	
-	if (newEnder) {
-		ender = newEnder;
-	}
-	
-	lastTag = theTag;
 }
 
-function handleMessage(msgEvent) {
-	var messageName = msgEvent.name;
-	var messageData = msgEvent.message;
-
-	if (messageName === "newAffiliate") {
-   		tags = messageData;
-		if (tags && tags != 'null' && tags != null) {
-			randomOne = Math.floor(Math.random()*tags.length);
-			tag = tags[randomOne];
-	   		rewriteLinks(tag);
-			rewroteLinksWithSetting = 1;
-		} else {
-			tags = ['thelexfiles05-20','daringfirebal-20', 'intertext'];
-			randomOne = Math.floor(Math.random()*tags.length);
-			tag = tags[randomOne];
-			rewriteLinks(tag);
+function handleMessage(messageEvent) {
+	var messageName = messageEvent.name;
+	var messageData = messageEvent.message;
+	
+	if (messageName === "setDomain") {
+		newDomain = messageData;
+		
+		if (newDomain && newDomain != "null" && newDomain != null) {
+			domain = newDomain;
+			http_url = "http://www."+newDomain;
+			https_url = "https://www."+newDomain;
 		}
 	}
+	
+	if (messageName === "setAffiliate") {
+   		newTags = messageData;
+		
+		if (newTags && newTags != "null" && newTags != null) {
+			tags = newTags
+		}
+	}
+	if (messageName === "refresh") {
+	 	randomOne = Math.floor(Math.random() * tags.length);
+	 	var theTag = tags[randomOne];
+	    rewriteLinks(theTag);
+	}
+
 }
